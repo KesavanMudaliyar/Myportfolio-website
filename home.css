@@ -79,7 +79,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .nav-links a {
@@ -258,7 +258,7 @@ main {
   color: #e0e0e0;
 }
 
-#skills, #projects, #achievements, #contact {
+#about, #skills, #projects, #achievements, #contact {
   margin-bottom: 3em;
   scroll-margin-top: 100px; /* Added for better scroll positioning */
 }
@@ -560,7 +560,7 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 900px) {
-  #skills, #projects, #achievements, #contact {
+  #about, #skills, #projects, #achievements, #contact {
     scroll-margin-top: 80px; /* Adjusted for mobile */
   }
   
@@ -644,7 +644,7 @@ footer {
 }
 
 @media (max-width: 600px) {
-  #skills, #projects, #achievements, #contact {
+  #about, #skills, #projects, #achievements, #contact {
     scroll-margin-top: 70px; /* Further adjusted for small mobile */
   }
   
