@@ -260,6 +260,7 @@ main {
 
 #skills, #projects, #achievements, #contact {
   margin-bottom: 3em;
+  scroll-margin-top: 100px; /* Added for better scroll positioning */
 }
 
 section h2 {
@@ -559,6 +560,10 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 900px) {
+  #skills, #projects, #achievements, #contact {
+    scroll-margin-top: 80px; /* Adjusted for mobile */
+  }
+  
   .menu-toggle {
     display: flex;
   }
@@ -639,6 +644,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  #skills, #projects, #achievements, #contact {
+    scroll-margin-top: 70px; /* Further adjusted for small mobile */
+  }
+  
   .navbar {
     padding: 0 0.8em;
   }

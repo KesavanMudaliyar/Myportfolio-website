@@ -1,4 +1,4 @@
-// home.js
+// home.js - Fixed scrolling and responsiveness
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize Vanta.js background effect
   VANTA.DOTS({
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Smooth scrolling for navigation links
+  // Smooth scrolling for navigation links - FIXED
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href').substring(1);
@@ -40,14 +40,23 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.remove('active');
         
         // Calculate the target position considering the fixed header
-        const headerHeight = document.querySelector('nav').offsetHeight;
-        const targetPosition = target.offsetTop - headerHeight;
+        const header = document.querySelector('nav');
+        const headerHeight = header.offsetHeight;
+        
+        // Get the target element's position
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        
+        // Calculate the final scroll position
+        const offsetPosition = targetPosition - headerHeight;
         
         // Smooth scroll to target
         window.scrollTo({
-          top: targetPosition,
+          top: offsetPosition,
           behavior: 'smooth'
         });
+        
+        // Update URL hash without jumping
+        history.pushState(null, null, '#' + targetId);
       }
     });
   });
