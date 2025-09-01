@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const textElement = document.getElementById('typewriter');
     const fullText = "Hello!!, I'm Kesavan Mudaliyar.";
     const parts = [
-      { text: "Hello!!,", delay: 100 },
+      { text: "Hello!!,", delay: 1000 },
       { text: " I'm", delay: 2000 },
       { text: " Kesavan Mudaliyar.", delay: 1000 }
     ];
